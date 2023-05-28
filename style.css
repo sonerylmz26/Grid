@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,400;0,700;1,700&family=Nunito+Sans:wght@500&family=Poppins:wght@100;300;400;500;600&family=Raleway:ital,wght@0,600;0,700;0,800;1,500;1,600;1,800&family=Rubik+Vinyl&family=Sorts+Mill+Goudy:ital@1&family=Wix+Madefor+Text:ital,wght@0,500;0,600;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+.container {
+  width: 80%;
+  background-color: #5baac2;
+  margin: 1rem auto;
+  border-radius: 10px;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 12rem;
+  }
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 95%;
+  padding: 10px 0;
+  margin-left: 10px;
+
+  .infoo__left {
+    display: flex;
+    width: 500px;
+    align-items: center;
+
+    & h3 {
+      margin-left: 20px;
+      font-size: 24px;
+    }
+
+    & strong {
+      margin-left: 0.9rem;
+    }
+    & p {
+      opacity: 0.8;
+      margin-left: 0.2rem;
+    }
+    .season_title {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+  #minus,
+  #minus2 {
+    display: none;
+  }
+  & i {
+    font-size: 2rem;
+    &:hover {
+      cursor: pointer;
+      transition: transform 2s ease-in-out;
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
+.grid__area {
+  width: 80%;
+  margin: 1rem auto;
+
+  transition: all 1s ease-in;
+  .grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+
+    .div {
+      background-color: aliceblue;
+      padding: 5px 20px;
+      text-align: start;
+      border-radius: 10px;
+      opacity: 0.8;
+
+      & h3 {
+        font-size: 1.5rem;
+        font-family: "Abril Fatface", cursive;
+        letter-spacing: 0.4px;
+      }
+
+      & p {
+        line-height: 22px;
+        opacity: 0.9;
+        font-family: "Lato", sans-serif;
+      }
+    }
+    @media screen and (max-width: 760px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(21, 1fr);
+    }
+    @media screen and (max-width: 1020px) and (min-width: 760px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+    }
+  }
+}
+
+.div__img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 50px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2rem;
+}
+.div1 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/14/19/42/sky-7993656_1280.jpg);
+
+  grid-column: 1 / span 2;
+}
+.div2 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/23/15/26/bengal-cat-8012976_640.jpg);
+  grid-row: 2 / span 2;
+}
+.div3 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/23/15/26/bengal-cat-8012976_640.jpg);
+}
+.div4 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/04/20/03/18/lizard-7938887_1280.jpg);
+}
+.div5 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/03/21/04/09/mountain-7866362_1280.jpg);
+  grid-row: 2 / span 2;
+}
+.div6 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/14/19/42/sky-7993656_1280.jpg);
+}
+.div7 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/14/19/42/sky-7993656_1280.jpg);
+  grid-column: 2 / span 2;
+}
+.div8 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/21/12/40/dog-8008483_1280.jpg);
+  grid-row: 4 / span 2;
+}
+.div9,
+.div10,
+.div11,
+.div12,
+.div14,
+.div15,
+.div16,
+.div17,
+.div18,
+.div19,
+.div20,
+.div21 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/05/14/19/42/sky-7993656_1280.jpg);
+}
+
+.div13 {
+  background-image: url(https://cdn.pixabay.com/photo/2023/04/23/09/40/bird-7945398_1280.jpg);
+  grid-row: 5 / span 2;
+}
+
+@media screen and (max-width: 760px) {
+  .grid__area2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+  }
+
+
+}
+
+/* @media screen and (max-width: 1020px) and (min-width: 760px) {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+
+} */
+@media screen and (max-width: 1200px) {
+  .grid__area2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+  }
+
+  .div1 {
+    grid-column: 1 / span 2;
+  }
+  .div2 {
+    grid-column: 1 / span 2;
+  }
+  .div3 {
+    grid-column: 1 / span 2;
+  }
+  .div4 {
+    grid-column: 1 / span 2;
+  }
+  .div5 {
+    grid-column: 1 / span 2;
+  }
+  .div6 {
+    grid-column: 1 / span 2;
+  }
+  .div7 {
+    grid-column: 1 / span 2;
+  }
+  .div8 {
+    grid-column: 1 / span 2;
+  }
+  .div9 {
+    grid-column: 1 / span 2;
+  }
+  .div10 {
+    grid-column: 1 / span 2;
+  }
+  .div11 {
+    grid-column: 1 / span 2;
+  }
+  .div12 {
+    grid-column: 1 / span 2;
+  }
+  .div13 {
+    grid-column: 1 / span 2;
+  }
+  .div14 {
+    grid-column: 1 / span 2;
+  }
+  .div15 {
+    grid-column: 1 / span 2;
+  }
+  .div16 {
+    grid-column: 1 / span 2;
+  }
+  .div17 {
+    grid-column: 1 / span 3;
+  }
+  .div18 {
+    grid-column: 1 / span 3;
+  }
+  .div19 {
+    grid-column: 1 / span 3;
+  }
+  .div20 {
+    grid-column: 1 / span 3;
+  }
+
+  .div21 {
+    grid-column: 1 / span 3;
+  }
+}
